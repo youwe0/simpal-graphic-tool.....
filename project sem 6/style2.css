@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+#hero2{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, rgb(239, 231, 231),#003C43);
+  display: grid;
+  place-content: center;
+}
+#temp-cover{
+    overflow: scroll;
+    height: 95vh;
+    width: 97vw;
+    background-color:#135D66;
+    border-radius: 30px;
+    
+}
+#temp-cover h1{
+    margin: 10px 15px;
+    /* background-color: yellow; */
+}
+#display-temp{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+/* managing scroll bar  */
+::-webkit-scrollbar {
+    width: 0px; /* Width of the scrollbar */
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+  }
+  ::-webkit-scrollbar-thumb {
+    background: blue; /* Color of the scrollbar handle */
+  }
+
+
+
+
+
+
+
+
+  
+.temp{
+    margin: 30px 20px ;
+    height: 160px;
+    aspect-ratio: 16/9;
+    background-color: white;
+}
+.temp .button{
+   width: 100%;
+   position: relative;
+   top: 100%;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive media query */
+@media screen and (max-width: 768px) {}

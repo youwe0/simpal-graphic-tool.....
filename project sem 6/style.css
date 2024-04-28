@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+body{
+  overflow-x: hidden;
+}
+
+#hero {
+  background: linear-gradient(to top,#003C43, rgb(239, 231, 231));
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+
+header {
+  height: 10vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+  border-bottom: 1px solid black;
+  background-color: #77B0AA;
+  
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  transition: top 0.3s;
+}
+
+header ul {
+  position: relative;
+  right: 5vw;
+  text-transform: uppercase;
+  height: inherit;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+  /* background-color: red; */
+}
+
+ul li a {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  outline: 0;
+  background-color: rgb(37, 32, 32);
+}
+
+.toggle span {
+  width: 100%;
+  height: 3px;
+  background: #ff0000;
+  display: block;
+  position: relative;
+
+}
+
+.toggle span:before,
+.toggle span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff9797;
+  transition: all 0.3s ease-out;
+}
+
+.toggle span:before {
+  top: -8px;
+}
+
+.toggle span:after {
+  top: 8px;
+}
+
+.toggle span.toggle {
+  background: transparent;
+}
+
+.toggle span.toggle:before {
+  top: 0;
+  transform: rotate(-45deg);
+  background: #d1d6d1;
+
+}
+
+.toggle span.toggle:after {
+  top: 0;
+  transform: rotate(45deg);
+  background: #d1d6d1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* style code for side bar  */
+.sidebar {
+  /* z-index: 100; */
+  background: #fff;
+  width: 215px;
+  position: fixed;
+  top: 10vh;
+  left: -235px;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding-top: 90px;
+  transition: all 0.3s ease-out;
+  padding: 2vh 10px;
+}
+
+#sidebar #tools {
+  height: 40px;
+  width: 190px;
+  background-color: rgb(214, 157, 157);
+  border-radius: 10px;
+  margin: 0 0 0 10;
+}
+
+#sidebar #tempalets {
+  height: 40px;
+  width: 190px;
+  background-color: rgb(126, 60, 60);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+#sidebar #canvas {
+  height: 40px;
+  width: 190px;
+  background-color: rgb(184, 148, 148);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.sidebarshow {
+  left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#main {
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  gap: 30px;
+}
+
+#element {
+  width: 100vw;
+  height: 90vh;
+  /* background-color: red; */
+  display: flex;
+  gap: 15px;
+  padding: 20px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  style code for color picker from image  */
+.container {
+  border: none;
+  color: #000;
+  background:#E3FEF7;
+  width: 420px;
+  height: 550px;
+  padding: 32px;
+  border-radius: 10px;
+}
+
+input,
+label,
+button {
+  border: none;
+  outline: none;
+}
+
+img {
+  width: 350px;
+  display: block;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 26px;
+  border-radius: 6px;
+  border: 2px solid #27272a;
+}
+
+.btns-container {
+  display: flex;
+  gap: 14px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label,
+button {
+  height: 40px;
+  display: block;
+  font-size: 13px;
+  background-color: #075985;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btns-container label,
+.btns-container button {
+  flex: 1;
+}
+
+#result {
+  margin: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+#result div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#result input {
+  background-color: transparent;
+  font-size: 13px;
+  padding: 6px;
+  border: 1px solid #075985;
+  width: 100%;
+  border-radius: 6px;
+}
+
+#result button {
+  position: absolute;
+  right: 2px;
+  background-color: transparent;
+  color: #075985;
+}
+
+#picked-color {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  border-radius: 6px;
+  border: 1px solid #27272a;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*  code for gradient genrator element   */
+.wrapper {
+  width: 450px;
+  height: 550px;
+  padding: 25px;
+  background: #E3FEF7;
+  border-radius: 7px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+}
+
+.wrapper .gradient-box {
+  height: 220px;
+  width: 100%;
+  border-radius: 7px;
+  background: linear-gradient(to left top, #5665E9, #A271F8);
+}
+
+.wrapper .row {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.options p {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.row :where(.column, button) {
+  width: calc(100% / 2 - 12px);
+}
+
+.options .select-box {
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+}
+
+.select-box select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.12rem;
+  background: none;
+}
+
+.options .palette {
+  margin-left: 60px;
+}
+
+.palette input {
+  height: 41px;
+  width: calc(100% / 2 - 20px);
+}
+
+.palette input:last-child {
+  margin-left: 6px;
+}
+
+.wrapper textarea {
+  width: 100%;
+  color: #333;
+  font-size: 1.05rem;
+  resize: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.buttons button {
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 0 0 -15px;
+  font-size: 1.09rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.buttons .refresh {
+  background: #6C757D;
+  height: 50px;
+}
+
+.buttons .refresh:hover {
+  background: #5f666d;
+}
+
+.buttons .copy {
+  background: #8A6CFF;
+  height: 50px;
+}
+
+.buttons .copy:hover {
+  background: #704dff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive media query */
+@media screen and (max-width: 500px) {
+  #hero {
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  #element {
+    display: grid;
+
+  }
+
+  #gradient {
+    margin: 10px -11px;
+  }
+}
